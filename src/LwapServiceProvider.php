@@ -1,4 +1,4 @@
-<?php namespace Truemedia\Lwap\Providers;
+<?php namespace Truemedia\Lwap;
 
 use Illuminate\Support\ServiceProvider;
 
