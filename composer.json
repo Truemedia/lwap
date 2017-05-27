@@ -1,0 +1,16 @@
+{
+    "name": "truemedia/lwap",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Wade Penistone",
+            "email": "wadespackages@yahoo.com"
+        }
+    ],
+    "require": {},
+    "autoload": {
+        "psr-4": {
+            "Truemedia\\Lwap\\": "src/"
+        }
+    }
+}
