@@ -12,5 +12,5 @@
 */
 
 Route::get('/test', function () {
-    return 'content';
+    return view('lwap::pages.test');
 });

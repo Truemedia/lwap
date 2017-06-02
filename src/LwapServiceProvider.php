@@ -12,6 +12,7 @@ class LwapServiceProvider extends ServiceProvider
     public function boot()
     {
         $this->loadRoutesFrom( $this->base_path('routes/web.php') );
+        $this->loadViewsFrom($this->resource_path('views'), 'lwap');
     }
 
     /**
@@ -21,6 +22,14 @@ class LwapServiceProvider extends ServiceProvider
     {
         $base = __DIR__;
         return "${base}/${path}";
+    }
+
+    /**
+      * Package - resource path
+      */
+    private function resource_path($path)
+    {
+        return $this->base_path("resources/${path}");
     }
 
     /**
