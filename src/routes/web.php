@@ -11,6 +11,6 @@
 |
 */
 
-Route::get('/test', function () {
-    return view('lwap::pages.test');
+Route::group(['namespace' => 'Truemedia\\Lwap\\App\\Http\\Controllers'], function() {
+    Route::get('test', 'TestController@index');
 });
