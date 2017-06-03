@@ -7,6 +7,7 @@ class TestController extends Controller
 {
     public function index()
     {
-        return view('lwap::pages.test');
+        $contact = config('site.contact');
+        return view('lwap::pages.test', compact('contact'));
     }
 }
