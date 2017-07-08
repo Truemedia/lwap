@@ -17,8 +17,9 @@ class LwapServiceProvider extends ServiceProvider
         $this->loadRoutesFrom( $this->base_path('routes/web.php') );
         $this->loadViewsFrom($this->resource_path('views'), 'lwap');
 
-        $this->publishes([$this->config_path('site.php') => config_path('site.php')], 'config');
         $this->publishes([$this->resource_path('assets/sass') => resource_path('assets/sass')], 'assets');
+        $this->publishes([$this->config_path('site.php') => config_path('site.php')], 'config');
+        $this->publishes([$this->database_path('seeds') => database_path('seeds')], 'seeds');
     }
 
     /**
