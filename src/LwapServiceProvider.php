@@ -1,6 +1,8 @@
 <?php namespace Truemedia\Lwap;
 
 use Illuminate\Support\ServiceProvider;
+use Truemedia\Lwap\App\Http\ViewComposers\LayoutComposer;
+use View;
 
 class LwapServiceProvider extends ServiceProvider
 {
@@ -16,6 +18,8 @@ class LwapServiceProvider extends ServiceProvider
         $this->loadMigrationsFrom( $this->database_path('migrations') );
         $this->loadRoutesFrom( $this->base_path('routes/web.php') );
         $this->loadViewsFrom($this->resource_path('views'), 'lwap');
+
+        View::composer('lwap::layouts.basic', LayoutComposer::class);
 
         $this->publishes([$this->resource_path('assets/sass') => resource_path('assets/sass')], 'assets');
         $this->publishes([$this->config_path('site.php') => config_path('site.php')], 'config');
