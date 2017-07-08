@@ -1,0 +1,9 @@
+// -----------------------------------------------------------------------------
+// This file contains styles that are specific to the test page.
+// -----------------------------------------------------------------------------
+
+.test {
+    &__contact {
+        background-color: $brand-color;
+    }
+}
