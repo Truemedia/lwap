@@ -30,6 +30,12 @@ Update composer
 
 	composer update
 
+Alter webpack.mix.js (root directory)
+
+    From: mix.js('resources/assets/js/app.js', 'public/js')
+
+    To: mix.js('vendor/truemedia/lwap/src/resources/assets/js/app.js', 'public/js')
+
 ### Usage ###
 
 To be updated
