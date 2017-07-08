@@ -13,6 +13,7 @@ class LwapServiceProvider extends ServiceProvider
     {
         $this->mergeConfigFrom($this->config_path('site.php'), 'site');
 
+        $this->loadMigrationsFrom( $this->database_path('migrations') );
         $this->loadRoutesFrom( $this->base_path('routes/web.php') );
         $this->loadViewsFrom($this->resource_path('views'), 'lwap');
 
@@ -30,19 +31,27 @@ class LwapServiceProvider extends ServiceProvider
     }
 
     /**
-      * Package - resource path
-      */
-    private function resource_path($path)
-    {
-        return $this->base_path("resources/${path}");
-    }
-
-    /**
       * Package - config path
       */
     private function config_path($path)
     {
         return $this->base_path("config/${path}");
+    }
+
+    /**
+      * Package - database path
+      */
+    private function database_path($path)
+    {
+        return $this->base_path("database/${path}");
+    }
+
+    /**
+      * Package - resource path
+      */
+    private function resource_path($path)
+    {
+        return $this->base_path("resources/${path}");
     }
 
     /**

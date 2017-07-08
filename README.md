@@ -36,6 +36,18 @@ Alter webpack.mix.js (root directory)
 
     To: mix.js('vendor/truemedia/lwap/src/resources/assets/js/app.js', 'public/js')
 
+Publish assets
+
+    php artisan vendor:publish
+
+Compile assets
+
+    npm run dev
+
+Run migrations
+
+    php artisan migrate
+
 ### Usage ###
 
 To be updated
